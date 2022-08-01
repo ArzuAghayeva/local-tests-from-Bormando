@@ -1,0 +1,14 @@
+{
+  "name": "local-tests",
+  "version": "1.0.0",
+  "description": "UI tests for localcoding.us",
+  "scripts": {
+    "cy:open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "Dmitrii Bormotov",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.3.1"
+  }
+}
