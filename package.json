@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "UI tests for localcoding.us",
   "scripts": {
-    "cy:open": "npx cypress open"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "keywords": [],
   "author": "Dmitrii Bormotov",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.3.1"
+    "cypress": "^10.3.1",
+    "cypress-xpath": "^2.0.1"
   }
 }
