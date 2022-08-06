@@ -1,7 +1,9 @@
 describe('Authentication', () => {
-  it('Sign in with valid credentials', () => {
+  beforeEach(() => {
     cy.visit('/user/login')
+  })
 
+  it('Sign in with valid credentials', () => {
     cy.get('#normal_login_email')
       .type('test@example.com')
     cy.get('#normal_login_password')
@@ -16,8 +18,6 @@ describe('Authentication', () => {
   })
 
   it('Sign in with invalid credentials', () => {
-    cy.visit('/user/login')
-
     cy.get('#normal_login_email')
       .type('test@example.com')
     cy.get('#normal_login_password')
@@ -30,8 +30,6 @@ describe('Authentication', () => {
   })
 
   it('Credentials validation', () => {
-    cy.visit('/user/login')
-
     cy.get('#normal_login_email')
       .type('test')
 
