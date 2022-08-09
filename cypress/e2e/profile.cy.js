@@ -1,12 +1,10 @@
 describe('Profile', () => {
   beforeEach(() => {
-    cy.visit('/user/login')
-    cy.get('#normal_login_email')
-      .type('test@example.com')
-    cy.get('#normal_login_password')
-      .type('Qwerty!23')
-    cy.get('.login-form-button')
-      .click()
+    cy.visit('/')
+    window.localStorage.setItem('token', Cypress.env('TOKEN'))
+    window.localStorage.setItem('userId', Cypress.env('USER_ID'))
+    window.localStorage.setItem('lang', 'ru')
+    cy.visit(`/profile/${Cypress.env('USER_ID')}`)
   })
 
   it('Daily report creation', () => {
