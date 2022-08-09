@@ -5,9 +5,9 @@ describe('Authentication', () => {
 
   it('Sign in with valid credentials', () => {
     cy.get('#normal_login_email')
-      .type('test@example.com')
+      .type(Cypress.env('EMAIL'))
     cy.get('#normal_login_password')
-      .type('Qwerty!23')
+      .type(Cypress.env('PASSWORD'))
     cy.get('.login-form-button')
       .click()
 
@@ -19,7 +19,7 @@ describe('Authentication', () => {
 
   it('Sign in with invalid credentials', () => {
     cy.get('#normal_login_email')
-      .type('test@example.com')
+      .type(Cypress.env('EMAIL'))
     cy.get('#normal_login_password')
       .type('123456')
     cy.get('.login-form-button')
