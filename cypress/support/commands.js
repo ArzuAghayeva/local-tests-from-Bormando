@@ -10,7 +10,12 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (token, userId) => {
+  cy.visit('/')
+  window.localStorage.setItem('token', token)
+  window.localStorage.setItem('userId', userId)
+  window.localStorage.setItem('lang', 'ru')
+})
 //
 //
 // -- This is a child command --
