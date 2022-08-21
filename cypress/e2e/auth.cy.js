@@ -1,5 +1,5 @@
 import LoginPage from '../pages/login.page'
-import ProfilePage from '../pages/profile.page'
+import ProfilePage from '../pages/app/profile.page'
 
 describe('Authentication', () => {
   beforeEach(() => {
