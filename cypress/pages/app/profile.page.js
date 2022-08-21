@@ -1,6 +1,6 @@
-import BasePage from './base.page'
+import AppPage from './app.page'
 
-class ProfilePage extends BasePage {
+class ProfilePage extends AppPage {
   get iconAvatar() { return cy.get('.ant-avatar-square') }
 }
 
